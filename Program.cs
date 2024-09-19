@@ -21,7 +21,10 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
-app.MapGet("/{url}", (string url) => {
+app.MapGet("/", () => "Welcome to the talking api");
+
+app.MapGet("/{url}", (string url) =>
+{
     return $"Hello, {url}";
 });
 
